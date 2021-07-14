@@ -339,7 +339,6 @@ extern "C"
 	//Idle Lines
 	int faceIdle() {
 		int randresult = rand();
-		randresult = 99999;
 		if (randresult * 0.000030517578 >= 0.5f && stageSpecificLines[GetCharacterID(0)][CurrentLevel][CurrentAct] != 0) {
 			//Stage Specific Line
 			EV_SetFace(PlayerPtrs[0], stageSpecificLines[GetCharacterID(0)][CurrentLevel][CurrentAct]);
