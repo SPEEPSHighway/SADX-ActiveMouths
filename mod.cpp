@@ -258,14 +258,18 @@ extern "C"
 
 	//Stage Clear (Sonic)
 	void faceSonicWin() {
+		if (GetCharacterID(0) == Characters_Sonic) {
 		PlayerLookingAtDestructor(0);
 		fixedFace(18, 18, 1, 90000);
+		}
 	}
 
 	//Stage Clear (Tails)
 	void faceTailsWin() {
-		PlayerLookingAtDestructor(0);
-		fixedFace(17, 17, 1, 90000);
+		if (GetCharacterID(0) == Characters_Tails) {
+			PlayerLookingAtDestructor(0);
+			fixedFace(17, 17, 1, 90000);
+		}
 	}
 
 	//Avoid out of range crash as Big. He has 6 useless "faces" (Weird ear flopping).
